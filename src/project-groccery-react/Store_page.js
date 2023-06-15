@@ -46,7 +46,7 @@ function Store_page(props) {
                 <div className='col-1'></div>
                 <Items_in_cart items={items} putOut={setItems} />
             </div>
-            <div className='row justify-content-center'>
+            <div className='row justify-content-center bigUnit'>
                 Total: {total.toFixed(2)}₪
                 <div className='row justify-content-center'>
                     <button className='col-2' onClick={handleChangePage}>Buy</button>

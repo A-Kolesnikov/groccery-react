@@ -15,7 +15,7 @@ function Items_in_store(props) {
         />));
 
     return (
-        <div className="col-5 border rounded">
+        <div className="col-5 border rounded bigUnit">
             <h2>Store</h2>
             {storedItems}
         </div>

@@ -15,7 +15,7 @@ function Items_in_cart(props){
         }
     }
     return(
-        <div className="col-5 border rounded">
+        <div className="col-5 border rounded bigUnit">
             <h2>Your Cart</h2>
             {boughtItems}
         </div>

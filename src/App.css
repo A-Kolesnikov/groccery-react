@@ -19,13 +19,26 @@
           justify-content: center;*/
 }
 
+.page{
+  background-image: url(../public/img/groccery-back.jpg);
+  background-size: 2100px;
+}
+
 .item{
   border: solid 1px black;
   border-radius: 10px;
 }
 
 .pic{
-  height: 80px;
+  height: 70px;
   width: 90px;
 }
 
+.bigUnit{
+  background-color: rgb(180, 199, 218);
+}
+
+.smallUnit{
+  margin: 10px;
+  background-color: bisque;
+}

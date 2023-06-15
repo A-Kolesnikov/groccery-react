@@ -10,7 +10,7 @@ export function ItemStored(props) {
     };
     
     return (
-        <div className={`row border rounded`} onClick={handleClick}>
+        <div className={`row border rounded smallUnit`} onClick={handleClick}>
             <div className={`col-3`}>
                 <img className="rounded pic" src={item.pic} />
             </div>
@@ -38,7 +38,7 @@ export function ItemBought(props) {
     };
 
     return (
-        <div className={`row border rounded`} onClick={toClick}>
+        <div className={`row border rounded smallUnit`} onClick={toClick}>
             <div className={`col-3`}>
                 <img className="rounded pic" src={item.pic} />
             </div>
