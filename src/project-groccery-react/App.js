@@ -1,13 +1,14 @@
 //import logo from '../logo.svg';
 import '../App.css';
 import React from 'react';
-import Clicker from './Clicker';
+import Store_page from './Store_page';
+
 
 function App() {
 
     return(
       <div>
-        <Clicker />
+        <Store_page />
         
       </div>
     )
