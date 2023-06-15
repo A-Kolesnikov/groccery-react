@@ -4,11 +4,13 @@ import Store_page from "./Store_page"
 
 export function ItemStored(props) {
     const item = props.item
-    function upd(){
-        props.items[props.item.id-1].toCart()
-    }
+
+    const handleClick = () => {
+        props.putIn(item);
+    };
+    
     return (
-        <div className={`row border rounded`} onClick={()=>props.putIn(upd)}>
+        <div className={`row border rounded`} onClick={handleClick}>
             <div className={`col-3`}>
                 <img className="rounded pic" src={item.pic} />
             </div>
@@ -17,7 +19,7 @@ export function ItemStored(props) {
             </div>
             <div className={`col-3`}>
                 <div>
-                    Price: {item.price} $
+                    Price: {item.price} ₪
                 </div>
                 <div>
                     Available: {item.inStore} pcs
@@ -30,8 +32,13 @@ export function ItemStored(props) {
 
 export function ItemBought(props) {
     const item = props.item
+
+    const toClick = () => {
+        props.putOut(item);
+    };
+
     return (
-        <div className={`row border rounded`}>
+        <div className={`row border rounded`} onClick={toClick}>
             <div className={`col-3`}>
                 <img className="rounded pic" src={item.pic} />
             </div>
@@ -40,13 +47,12 @@ export function ItemBought(props) {
             </div>
             <div className={`col-3`}>
                 <div>
-                    Price: {item.price} $
+                    Price: {item.price} ₪
                 </div>
                 <div>
                     In cart: {item.inCart} pcs
                 </div>
             </div>
         </div>
-
     )
 }

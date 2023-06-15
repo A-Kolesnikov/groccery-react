@@ -22,7 +22,7 @@ export default class Item{
     fromCart(){
         if(this.inCart > 0){
             this.inStore++;
-            this.inList--;
+            this.inCart--;
         }
     }
 

@@ -8,14 +8,15 @@ function Items_in_store(props) {
         item.toCart();
         putIn([...props.items]) //trigger state update
     }
-    const storedItems = []
-    
-    for (let element of props.items) {
-        storedItems.push(<ItemStored key={'s' + element.id} item={element} items={props.items} putIn={putIn} />)
-    }
+    const storedItems = props.items.map((element) => (
+        <ItemStored
+            key={'s' + element.id}
+            item={element} putIn={handleToCart} // Pass the method as a prop
+        />));
+
     return (
         <div className="col-5 border rounded">
-            <h2>Grocceries</h2>
+            <h2>Store</h2>
             {storedItems}
         </div>
     )

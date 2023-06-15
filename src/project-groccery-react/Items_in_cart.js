@@ -3,10 +3,15 @@ import {ItemBought} from "./Item";
 //import { items } from "./backend/classes"
 
 function Items_in_cart(props){
+    const putOut = props.putOut
+    const handleFromCart = (item) => {
+        item.fromCart();
+        putOut([...props.items]);
+    }
     const boughtItems = []
     for (let element of props.items){
         if(element.inCart > 0){
-        boughtItems.push(<ItemBought key = {"b" + element.id} item={element} />)
+        boughtItems.push(<ItemBought key = {"b" + element.id} item={element} putOut = {handleFromCart}/>)
         }
     }
     return(
