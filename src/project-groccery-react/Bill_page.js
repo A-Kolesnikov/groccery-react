@@ -14,12 +14,12 @@ function Bill_page(props) {
     for (const element of props.items) {
         if (element.inCart > 0) {
             total += element.inCart * element.price
-            boughtItems.push(<div key={'b' + element.id} className='text-center'>{element.itemName} - {element.inCart}pcs.....{(element.inCart * element.price).toFixed(2)}$</div>)
+            boughtItems.push(<div key={'b' + element.id} className='text-center smallUnit'>{element.itemName} - {element.inCart}pcs.....{(element.inCart * element.price).toFixed(2)}$</div>)
         }
     }
     return (
         <div className='container'>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center bigUnit">
                 <div className="col-8">
                     <h2 className='text-center'>Your order</h2>
                     <div className='row justify-content-center'>
